@@ -1,0 +1,49 @@
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title> HTML5 Web page for WebInt</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=true'></script>
+    <script src='myLoc.js'></script>
+  </head>
+  
+  <body>
+  
+   		<header>
+			<h1> SafeReturn</h1>
+			<h4> Find your route.</h4>
+		</header>			
+		
+		<section id = "routesMap">		
+			<article id = "map">
+				<h2>Select the best route </h2>
+				<section >	
+					<div >
+						<div id='map-canvas'>
+						  Google Map will go here!.
+						</div>
+					</div>	
+				</section>	
+				<section >
+					<h2>List of routes </h2>
+					<div >
+						<h3>  Choose one </h3>
+						<div id="routeList">
+							TO DO -> load with javascript the list of routes, makepossible select one and go to the next screen
+						</div>			
+					</div>	
+				</section>	
+
+				<form name="tempButton" action="route.html" method="get" accept-charset="utf-8">
+						<input type="submit" value="go home!">
+				</form>				
+			</article>			
+		</section>
+		
+		<footer id="footerDiv">
+			<div>Antonio Bazco and Eva Fernandez. 2015 Eurecom</div>
+			<a href="mailto:Antonio.Bazco-Nogueras@eurecom.com" class="emailContact">Contact me</a>			
+		</footer>
+  </body>
+</html>

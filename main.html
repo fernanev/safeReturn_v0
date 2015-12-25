@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	
+  <head>
+	<meta charset="UTF-8">
+	<title> SafeReturn</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=true'></script>
+  </head>
+  
+  <body>
+  
+   		<header>
+			<h1> SafeReturn</h1>
+			<h4> Find your route.</h4>
+		</header>
+				
+		<aside id="asideS">
+			<form name="configButton" action="config.html" method="get" accept-charset="utf-8">
+					<input type="submit" value="Config">
+			</form>
+		</aside>
+						
+		<section id = "selectRoute">
+			<article id = "contactPost">
+				<h2>Please enter your route: </h2>
+				<section>
+					<h3>  </h3>
+					<form name="routeForm" action="map.html" method="get" accept-charset="utf-8">
+						<table id="fromToTable">
+							<tr>
+								<td class="label">From:</td>
+								<td class="wideField"> <input type="text" name="fromWhere"> </td>
+							</tr>
+							<tr>
+								<td class="label">To:</td>
+								<td class="wideField"><input type="text" id="toWhere"> </td>
+							</tr>							
+						</table>
+						<input type="submit" id ="submitRoute" value="GO">
+					</form>
+				</section>
+			</article>
+			
+			<article id = "yourComment">
+				<h2>Comment you</h2>
+				<section>
+					<h3>  </h3>
+					<form id="commentForm" name="commentForm" action="main.html" method="get" accept-charset="utf-8">
+						<table id="commentTable">
+							<tr>
+								<td class="label">Where:</td>
+								<td class="wideField"> <input type="text" name="commentWhere"> </td>
+							</tr>
+							<tr>
+								<td class="label">What:</td>
+								<td class="wideField">
+									<textarea  id="commentWhat" rows="4" cols="50" name="comment" placeholder="Enter text here..." form="commentForm" required ></textarea>
+								</td>
+							</tr>							
+						</table>
+						<input type="submit" id ="submitRoute" value="Send">
+					</form>
+				</section>
+			</article>	
+			
+			<article id = "commentArticle">
+				<h2>Search for comments</h2>
+				<section >							
+					<h3>  </h3>
+					<form name="commentSearchForm" action="main.html" method="get" accept-charset="utf-8">
+						<table id="searchTable">
+							<tr>
+								<td class="label">About:</td>
+								<td class="wideField"> <input type="text" name="searchAbout"> </td>
+							</tr>
+							<tr>
+								<td class="label">From date:</td>
+								<td class="wideField"><input type="date" name="searchDate"> </td>
+							</tr>							
+						</table>
+						<input type="submit" id ="submitRoute" value="Search">
+					</form>
+				</section>
+			</article>	
+			
+		</section>
+		
+		
+		<footer id="footerDiv">
+			<div>Antonio Bazco and Eva Fernandez. 2015 Eurecom</div>
+			<a href="mailto:Antonio.Bazco-Nogueras@eurecom.com" class="emailContact">Contact me</a>			
+		</footer>
+  </body>
+</html>

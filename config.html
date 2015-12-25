@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title> HTML5 Web page for WebInt</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=true'></script>
+    <script src='myLoc.js'></script>
+	<script src='myVideo.js' defer></script>
+  </head>
+  
+  <body>
+  
+   		<header>
+			<h1> SafeReturn</h1>
+			<h4> Find your route.</h4>
+		</header>
+		
+		<section class="configuration">
+			<form name="changeFields" action="main.html" method="get" accept-charset="utf-8">
+				<ul>
+					<li><label for="name">Name</label>
+					<input type="text" name="name" placeholder="current Name by javascript"></li>
+					
+					<li><label for="phone"> Phone number</label>
+					<input type="telephone" name="phonenumber" placeholder=""></li>
+					
+					<li><label for="usermail">Email</label>
+					<input type="email" name="usermail" placeholder="currentEmailByJavascript@email.com"></li>
+					
+					<li><label for="password">Password</label>
+					<input type="password" name="password" placeholder="password" ></li>
+					<li><label for="repassword">Repeat Password</label>
+					<input type="password" name="password" placeholder="password" ></li>
+
+					<li><input type="submit" value="Update changes"></li>
+				</ul>
+			</form>
+		</section>
+		
+		<section>
+			<form name="contactButton" action="contactInfo.html" method="get" accept-charset="utf-8">
+					<input type="submit" value="contact info">
+			</form>
+			<form name="commonRoutesButton" action="commonRoutes.html" method="get" accept-charset="utf-8">
+					<input type="submit" value="common routes">
+			</form>
+		</section>
+		
+		<footer id="footerDiv">
+			<div>Antonio Bazco and Eva Fernandez. 2015 Eurecom</div>
+			<a href="mailto:Antonio.Bazco-Nogueras@eurecom.com" class="emailContact">Contact me</a>			
+		</footer>
+	</body>
+	
+	
+</html>
