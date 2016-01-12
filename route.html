@@ -1,23 +1,44 @@
 <html>
   <head>
 	<meta charset="UTF-8">
-	<title> HTML5 Web page for WebInt</title>
+	<title> SafeReturn </title>
 
  	 <link rel="stylesheet" type="text/css" href="style.css">
      <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=true'></script>
-    <script src='myLoc.js'></script>
+    <script src='route.js'></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
   </head>
   
+  
+		
   <body>
-	<div id='map-canvas'>
-	  Google Map will go here!.
-	</div>
-	<div id='redButton'>
-	  <button>RedBig Button to alarm/police</button>
-	</div>
-	<div id='contactButton'>
-	  <button>yellow lateral button to contact</button>
-	</div>
-	
-  </body>
+		<header>
+			<h1> SafeReturn</h1>
+			<h4> Find your route</h4>
+		</header>
+		
+		<aside id="asideS">
+			<form name="configButton" action="config.html" method="get" accept-charset="utf-8">
+				<input type="image" id="config" name="submit" src="config.png" alt="config" style="width:64px; height: 64px">
+			</form>
+		</aside>
+		
+		<div id='map-canvas'>
+		  Google Map will go here!.
+		</div>
+		<div id='buttons'>
+			<a id='redButton'>
+			  <input type="image" alt="callPolice" src="redButton.png" onClick="callPolice()" style="width:64px; height: 64px">
+			</a>
+			&nbsp;&nbsp;&nbsp;
+			<a id='contactButton'>
+			  <input type="image" alt="callContact" src="yellowButton.png" onClick="callContact()" style="width:64px; height: 64px">
+			</a>
+			&nbsp;&nbsp;&nbsp;
+			<a id='saveButton'>
+			  <input type="image" alt="saveRoute" src="saveButton.png" onClick="saveRoute()" style="width:64px; height: 64px">
+			</a>
+		</div>
+	</body>
 </html>

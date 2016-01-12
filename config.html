@@ -1,39 +1,41 @@
-<!DOCTYPE html>
 <html>
   <head>
 	<meta charset="UTF-8">
-	<title> HTML5 Web page for WebInt</title>
+	<title> SafeReturn </title>
 
 	<link rel="stylesheet" type="text/css" href="style.css">
     <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=true'></script>
-    <script src='myLoc.js'></script>
-	<script src='myVideo.js' defer></script>
+	<script src='config.js'></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
   </head>
   
   <body>
   
    		<header>
 			<h1> SafeReturn</h1>
-			<h4> Find your route.</h4>
+			<h4> Find your route</h4>
 		</header>
 		
 		<section class="configuration">
-			<form name="changeFields" action="main.html" method="get" accept-charset="utf-8">
+			<form name="changeFields" id="formChange" action="config.html" onsubmit="event.preventDefault(); changeInfo()" method="get" accept-charset="utf-8">
 				<ul>
+					<li><label for="username">Username: </label> <b id="labelUser" name="username"></b></li>
 					<li><label for="name">Name</label>
-					<input type="text" name="name" placeholder="current Name by javascript"></li>
+					<input type="text" id="name" name="name" placeholder="" required></li>
 					
 					<li><label for="phone"> Phone number</label>
-					<input type="telephone" name="phonenumber" placeholder=""></li>
+					<input type="telephone" id="phonenumber" name="phonenumber" pattern="\d\d\d\d\d\d\d\d\d" title="#########" placeholder="" required></li>
 					
 					<li><label for="usermail">Email</label>
-					<input type="email" name="usermail" placeholder="currentEmailByJavascript@email.com"></li>
+					<input type="email" id="usermail" name="usermail" placeholder="" required></li>
 					
-					<li><label for="password">Password</label>
-					<input type="password" name="password" placeholder="password" ></li>
-					<li><label for="repassword">Repeat Password</label>
-					<input type="password" name="password" placeholder="password" ></li>
-
+					<li><label for="newPassword"> new password</label>
+					<input type="password" id="newPassword" name="newPassword" placeholder="password" ></li>
+					<li><label for="reNewPassword">Repeat new Password</label>
+					<input type="password" id="reNewPassword" name="reNewPassword" placeholder="password" ></li>
+					
+					<li><label for="currentPassword">Introduce the current password</label>
+					<input type="password" id="currentPassword" name="password" placeholder="password" required></li>					
 					<li><input type="submit" value="Update changes"></li>
 				</ul>
 			</form>
@@ -41,10 +43,13 @@
 		
 		<section>
 			<form name="contactButton" action="contactInfo.html" method="get" accept-charset="utf-8">
-					<input type="submit" value="contact info">
+					<input class="buttonClass" type="submit" value="contact info">
 			</form>
 			<form name="commonRoutesButton" action="commonRoutes.html" method="get" accept-charset="utf-8">
-					<input type="submit" value="common routes">
+					<input class="buttonClass" type="submit" value="common routes">
+			</form>
+			<form name="goBackButton" action="main.html" method="get" accept-charset="utf-8">
+					<input class="buttonClass" type="submit" value="Come back">
 			</form>
 		</section>
 		

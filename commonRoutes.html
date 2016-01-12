@@ -1,23 +1,32 @@
-<!DOCTYPE html>
 <html>
   <head>
 	<meta charset="UTF-8">
-	<title> HTML5 Web page for WebInt</title>
+	<title> SafeReturn</title>
 
 	<link rel="stylesheet" type="text/css" href="style.css">
     <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=true'></script>
-    <script src='myLoc.js'></script>
-	<script src='myVideo.js' defer></script>
+    <script src='selectRoutes.js'></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
   </head>
   
   <body>
   
    		<header>
-			<h1> TO DO</h1>
-			<h4> Find your route.</h4>
+			<h1> </h1>
+			<h4> Find your route</h4>
 		</header>
-				
 		
+		<aside id="asideS">
+			<form name="configButton" action="config.html" method="get" accept-charset="utf-8">
+				<input type="image" id="config" name="submit" src="config.png" alt="config" style="width:64px; height: 64px">
+			</form>
+		</aside>
+		
+		<section id="routeList">
+		</section>
+		<section id="backSection">
+			<input class="buttonClass" type="button" id="goBackButton" value="Come back" onclick="goBack()">
+		</section>
 			
 		
 		<footer id="footerDiv">

@@ -3,35 +3,39 @@
 	<meta charset="UTF-8">
 	<title> SafeReturn</title>
 	<link rel="stylesheet" type="text/css" href="style.css">    
+	<script type='text/javascript' src='checkUser.js'></script>	
+	<script src='users.txt'></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
   </head>
   
   <body>
    		<header>
 			<h1> SafeReturn</h1>
-			<h4> Find your route.</h4>
+			<h4> Find your route</h4>
 		</header>
 		
 		<section class="SignUpform cf">
-			<form name="signUp" action="main.html" method="get" accept-charset="utf-8">
-				<ul>
-					<li><label for="name">Name</label>
-					<input type="text" name="name" placeholder="your name" required></li>
-					<li><label for="username">Username</label>
-					<input type="text" name="username" placeholder="your username" required></li>
+			<form id="signUp" name="signUp" action="main.html" onsubmit="event.preventDefault(); createUser()" accept-charset="utf-8">
+				<div>
+					<div><label for="name">Name</label>
+					<input type="text" id="name" placeholder="your name" required></div>
+					<div><label for="username">Username</label>
+					<input type="text" id="username" placeholder="your username" required></div>
 					
-					<li><label for="phone"> Phone number</label>
-					<input type="telephone" name="phonenumber" placeholder="" required></li>
+					<div><label for="phone"> Phone number</label>
+					<input type="tel" id="phonenumber" placeholder="" pattern="\d\d\d\d\d\d\d\d\d" title="#########" required></div>
 					
-					<li><label for="usermail">Email</label>
-					<input type="email" name="usermail" placeholder="yourname@email.com" required></li>
+					<div><label for="usermail">Email</label>
+					<input type="email" id="usermail" placeholder="yourname@email.com" required></div>
 					
-					<li><label for="password">Password</label>
-					<input type="password" name="password" placeholder="password" required></li>
-					<li><label for="repassword">Repeat Password</label>
-					<input type="password" name="password" placeholder="password" required></li>
+					<div><label for="password">Password</label>
+					<input type="password" id="password" placeholder="password" required></div>
+					<div><label for="repassword">Repeat Password</label>
+					<input type="password" id="rePassword" placeholder="password" required></div>
 
-					<li><input type="submit" value="Login"></li>
-				</ul>
+					<div><input class="buttonClass" type="submit" id="submitButton" value="Login"></div>
+				</div>
 			</form>
 		</section>
 		<footer id="footerDiv">

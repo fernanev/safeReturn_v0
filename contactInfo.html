@@ -3,28 +3,30 @@
 	<meta charset="UTF-8">
 	<title> SafeReturn</title>
 	<link rel="stylesheet" type="text/css" href="style.css">    
+	<script src='contactInfo.js'></script>
+	<script src='users.txt'></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
   </head>
   
   <body>
    		<header>
 			<h1> SafeReturn</h1>
-			<h4> Find your route.</h4>
+			<h4> Find your route</h4>
 		</header>
 		
 		<section >
-			<form name="contactInfo" action="config.html" method="get" accept-charset="utf-8">
-				<ul>
-					<li><label for="name">Name</label>
-					<input type="text" name="name" placeholder="javascript contact name" required></li>
+			<form name="contactInfo" id="contactInfoForm" action="config.html" onsubmit="event.preventDefault(); changeContactInfo()" method="get" accept-charset="utf-8">
+					<div><label for="name">Name</label>
+					<input type="text" id="name" name="name" placeholder="contact name" required></div>
 				
-					<li><label for="phone"> Phone number</label>
-					<input type="telephone" name="phonenumber" placeholder="" required></li>
+					<div><label for="phone"> Phone number</label>
+					<input type="telephone" id="phonenumber" name="phonenumber" pattern="\d\d\d\d\d\d\d\d\d" title="#########" placeholder="" required></div>
 					
-					<li><label for="usermail">Email</label>
-					<input type="email" name="usermail" placeholder="his-hername@email.com" required></li>
+					<div><label for="usermail">Email</label>
+					<input type="email" id="usermail" name="usermail" placeholder="email@email.com" required></div>
 					
-					<li><input type="submit" value="Save"></li>
-				</ul>
+					<div><input class="buttonClass" type="submit" value="Save"></div>
+				</div>
 			</form>
 		</section>
 		<footer id="footerDiv">

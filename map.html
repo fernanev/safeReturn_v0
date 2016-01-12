@@ -1,19 +1,27 @@
 <html>
   <head>
 	<meta charset="UTF-8">
-	<title> HTML5 Web page for WebInt</title>
+	<title> SafeReturn </title>
 
 	<link rel="stylesheet" type="text/css" href="style.css">
-    <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=true'></script>
-    <script src='myLoc.js'></script>
-  </head>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src='map.js'></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />   
+</head>
   
   <body>
   
    		<header>
 			<h1> SafeReturn</h1>
-			<h4> Find your route.</h4>
+			<h4> Find your route</h4>
 		</header>			
+		
+		<aside id="asideS">
+			<form name="configButton" action="config.html" method="get" accept-charset="utf-8">
+					<input type="image" id="config" name="submit" src="config.png" alt="config" style="width:64px; height: 64px">
+			</form>
+		</aside>
 		
 		<section id = "routesMap">		
 			<article id = "map">
@@ -30,14 +38,20 @@
 					<div >
 						<h3>  Choose one </h3>
 						<div id="routeList">
-							TO DO -> load with javascript the list of routes, makepossible select one and go to the next screen
+							<form method="get" action="route.html" accept-charset="utf-8">
+									<fieldset>
+											<legend> Choose one</legend>
+													<input type="radio" name="route" value="driving" required /> <b>Route 1:</b> Safety: Level 5     <area class="redArea"></area> <br />
+													<input type="radio" name="route" value="transit"/> <b>Route 2:</b> Safety: Level 4     <area class="yellowArea"></area> <br />
+													<input type="radio" name="route" value="walking"/> <b>Route 3:</b> Safety: Level 2     <area class="greenArea"></area> <br />
+													<input type="radio" name="route" value="bicycling"/> <b>Route 4:</b> Safety: Level 1     <area class="blueArea"></area>  <br />
+													
+													<input class="buttonClass" type="submit" value="Go Home" />
+									</fieldset>
+							</form>
 						</div>			
 					</div>	
-				</section>	
-
-				<form name="tempButton" action="route.html" method="get" accept-charset="utf-8">
-						<input type="submit" value="go home!">
-				</form>				
+				</section>			
 			</article>			
 		</section>
 		

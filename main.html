@@ -7,18 +7,21 @@
 
 	<link rel="stylesheet" type="text/css" href="style.css">
     <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=true'></script>
+	<script type='text/javascript' src='main.js'></script>	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
   </head>
   
   <body>
   
    		<header>
 			<h1> SafeReturn</h1>
-			<h4> Find your route.</h4>
+			<h4> Find your route</h4>
 		</header>
 				
 		<aside id="asideS">
 			<form name="configButton" action="config.html" method="get" accept-charset="utf-8">
-					<input type="submit" value="Config">
+					<input type="image" id="config" name="submit" src="config.png" alt="config" style="width:64px; height: 64px">
 			</form>
 		</aside>
 						
@@ -26,7 +29,6 @@
 			<article id = "contactPost">
 				<h2>Please enter your route: </h2>
 				<section>
-					<h3>  </h3>
 					<form name="routeForm" action="map.html" method="get" accept-charset="utf-8">
 						<table id="fromToTable">
 							<tr>
@@ -35,10 +37,10 @@
 							</tr>
 							<tr>
 								<td class="label">To:</td>
-								<td class="wideField"><input type="text" id="toWhere"> </td>
+								<td class="wideField"><input type="text" name="toWhere"> </td>
 							</tr>							
 						</table>
-						<input type="submit" id ="submitRoute" value="GO">
+						<input class="buttonClass" type="submit" id ="submitRoute" value="GO">
 					</form>
 				</section>
 			</article>
@@ -46,12 +48,11 @@
 			<article id = "yourComment">
 				<h2>Comment you</h2>
 				<section>
-					<h3>  </h3>
 					<form id="commentForm" name="commentForm" action="main.html" method="get" accept-charset="utf-8">
 						<table id="commentTable">
 							<tr>
 								<td class="label">Where:</td>
-								<td class="wideField"> <input type="text" name="commentWhere"> </td>
+								<td class="wideField"> <input type="text" id="commentPlace" name="commentWhere"> </td>
 							</tr>
 							<tr>
 								<td class="label">What:</td>
@@ -60,30 +61,37 @@
 								</td>
 							</tr>							
 						</table>
-						<input type="submit" id ="submitRoute" value="Send">
+						<input class="buttonClass" type="button" value="Send" onClick="sendComment()">
 					</form>
 				</section>
 			</article>	
 			
 			<article id = "commentArticle">
 				<h2>Search for comments</h2>
-				<section >							
-					<h3>  </h3>
+				<section >		
 					<form name="commentSearchForm" action="main.html" method="get" accept-charset="utf-8">
 						<table id="searchTable">
 							<tr>
 								<td class="label">About:</td>
-								<td class="wideField"> <input type="text" name="searchAbout"> </td>
+								<td class="wideField"> <input type="text" id="searchAbout"> </td>
 							</tr>
 							<tr>
 								<td class="label">From date:</td>
-								<td class="wideField"><input type="date" name="searchDate"> </td>
+								<td class="wideField"><input type="date" id="searchDate"> </td>
 							</tr>							
 						</table>
-						<input type="submit" id ="submitRoute" value="Search">
+						<input class="buttonClass" type="button" id ="submitRoute" value="Search" onClick="searchComment()">
 					</form>
 				</section>
-			</article>	
+			</article>
+
+			<div id="commentSection">
+				
+			</div>
+			<div id="searchSection">
+				
+			</div>
+			
 			
 		</section>
 		
