@@ -8,7 +8,13 @@
 		font-size: 14;
 	}
 
-
+	.modal-content{
+		font-size: 10;
+	}
+	.modalImg{
+		width:28px; 
+		height: 28px
+	}
 }
 .redArea {
 	 background: rgba(240,40,40,1);
@@ -285,4 +291,9 @@ footer{
 #myModalSave:target{
   opacity:1;
   pointer-events:auto;
+}
+
+.modalImg{
+	width:64px; 
+	height: 64px
 }
