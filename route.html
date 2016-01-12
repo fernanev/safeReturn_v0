@@ -23,26 +23,46 @@
 				<input type="image" id="config" name="submit" src="config.png" alt="config" style="width:64px; height: 64px">
 			</form>
 		</aside>
-		
 		<div id='map-canvas'>
 		  Google Map will go here!.
 		</div>
 		<div id='buttons'>
-			<a id='redButton'>
-			  <input type="image" alt="callPolice" src="redButton.png" onClick="callPolice()" style="width:64px; height: 64px">
+			<a id='redButton' href="#myModalPolice" >
+			  <input type="image" alt="callPolice" src="redButton.png" style="width:64px; height: 64px">
 			</a>
 			&nbsp;&nbsp;&nbsp;
-			<a id='contactButton'>
-			  <input type="image" alt="callContact" src="yellowButton.png" onClick="callContact()" style="width:64px; height: 64px">
+			<a id='contactButton' href="#myModalContact" >
+			  <input type="image" alt="callContact" src="yellowButton.png" style="width:64px; height: 64px">
 			</a>
 			&nbsp;&nbsp;&nbsp;
-			<a id='saveButton'>
-			  <input type="image" alt="saveRoute" src="saveButton.png" onClick="saveRoute()" style="width:64px; height: 64px">
+			<a id='saveButton' href="#myModalSave" >
+			  <input type="image" alt="saveRoute" onclick="saveRoute();" src="saveButton.png" style="width:64px; height: 64px">
 			</a>
 		</div>
 		<footer id="footerDiv">
 			<div>Antonio Bazco and Eva Fernandez. 2015 Eurecom</div>
 			<a href="mailto:Antonio.Bazco-Nogueras@eurecom.com" class="emailContact">Contact me</a>			
 		</footer>
+		<div id="myModalPolice" class="modal">
+			<div class="modal-content">
+				<a href="#" style="text-align: right;">X</a>
+				<h2>Calling the police</h2>
+				<img src="phone.png" alt="calling" style="width:64px; height: 64px">
+			</div>  
+		</div>
+		<div id="myModalContact" class="modal">
+			<div class="modal-content">
+				<a href="#" style="text-align: right;">X</a>
+				<h2>Calling contact</h2>
+				<img src="phone.png" alt="calling" style="width:64px; height: 64px">
+			</div>  
+		</div>
+		<div id="myModalSave" class="modal">
+			<div class="modal-content">
+				<a href="#" style="text-align:right">X</a>
+				<h2>Route saved</h2>
+				<img src="saveButton.png" alt="saved" style="width:64px; height: 64px">
+			</div>  
+		</div>
 	</body>
 </html>

@@ -1,14 +1,6 @@
 var map;
 
-function callPolice() {
-	alert('CALLING POLICE');
-}
-function callContact() {
-	alert('CALLING CONTACT');
-}
-
 function saveRoute() {
-	alert(window.location.search.split('=')[1]);
 	var routes = "" + localStorage.getItem('from') + "-" +  localStorage.getItem('to') + "-" +  window.location.search.split('=')[1];
 	var savedRoutes = window.localStorage.getItem('routes');
 	if (savedRoutes == null) {
