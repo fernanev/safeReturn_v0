@@ -18,7 +18,7 @@ function userExist() {
 			if (password == document.getElementById("password").value) {
 				localStorage.setItem('users',allUsers);
 				localStorage.setItem('currentUser',usersList[i]);
-				window.open('main.html', '_self',false);
+				window.open('http://fernanev.github.io/main.html', '_self',false);
 				error = false;
 			} 
 		} 
