@@ -21,15 +21,15 @@
 			<form name="changeFields" id="formChange" action="config.html" onsubmit="event.preventDefault(); changeInfo()" method="get" accept-charset="utf-8">
 				<table id="fromToTable">
 							<tr>
-								<td> <label for="username">Username: </label> <b id="labelUser" name="username"></b> </td>
+								<td> <label>Username: </label> <b id="labelUser"></b> </td>
 							</tr>
 							<tr>
 								<td><label for="name">Name</label></td>
 								<td><input type="text" id="name" name="name" placeholder="" required></td>
 							</tr>
 							<tr>
-								<td><label for="phone"> Phone number</label></td>
-								<td><input type="telephone" id="phonenumber" name="phonenumber" pattern="\d\d\d\d\d\d\d\d\d" title="#########" placeholder="" required></td>
+								<td><label for="phonenumber"> Phone number</label></td>
+								<td><input type="tel" id="phonenumber" name="phonenumber" pattern="\d\d\d\d\d\d\d\d\d" title="#########"></td>
 							</tr>	
 							<tr>
 								<td><label for="usermail">Email</label></td>

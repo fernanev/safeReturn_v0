@@ -1,6 +1,7 @@
 var map;
 
 function saveRoute() {
+	window.open('http://fernanev.github.io/route.html#myModalSave', '_self',false);
 	var to=localStorage.getItem('to').replace('%2C',', ').replace('+',' ');
 	var from=localStorage.getItem('from').replace('%2C',', ').replace('+',' ');
 	
@@ -15,7 +16,14 @@ function saveRoute() {
 	//alert('Route Saved    ' + routes);
 }
 
-function ring() {
+function callContact() {
+	window.open('http://fernanev.github.io/route.html#myModalContact', '_self',false);
+	var audio = new Audio('media/callRing.mp3');
+	audio.play();
+}
+
+function callPolice() {
+	window.open('http://fernanev.github.io/route.html#myModalPolice', '_self',false);
 	var audio = new Audio('media/callRing.mp3');
 	audio.play();
 }
