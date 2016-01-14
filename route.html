@@ -3,9 +3,9 @@
 	<meta charset="UTF-8">
 	<title> SafeReturn </title>
 
- 	 <link rel="stylesheet" type="text/css" href="style.css">
+ 	 <link rel="stylesheet" type="text/css" href="css/style.css">
      <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=true'></script>
-    <script src='route.js'></script>
+    <script src='js/route.js'></script>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
   </head>
@@ -20,7 +20,7 @@
 		
 		<aside id="asideS">
 			<form name="configButton" action="config.html" method="get" accept-charset="utf-8">
-				<input type="image" id="config" name="submit" src="config.png" alt="config" style="width:64px; height: 64px">
+				<input type="image" id="config" name="submit" src="media/config.png" alt="config" style="width:64px; height: 64px">
 			</form>
 		</aside>
 		<div id='map-canvas'>
@@ -28,15 +28,15 @@
 		</div>
 		<div id='buttons'>
 			<a id='redButton' href="#myModalPolice" >
-			  <input type="image" alt="callPolice" src="redButton.png" style="width:64px; height: 64px">
+			  <input type="image" alt="callPolice" onclick="ring()" src="media/redButton.png" style="width:64px; height: 64px">
 			</a>
 			&nbsp;&nbsp;&nbsp;
 			<a id='contactButton' href="#myModalContact" >
-			  <input type="image" alt="callContact" src="yellowButton.png" style="width:64px; height: 64px">
+			  <input type="image" alt="callContact" onclick="ring()" src="media/yellowButton.png" style="width:64px; height: 64px">
 			</a>
 			&nbsp;&nbsp;&nbsp;
 			<a id='saveButton' href="#myModalSave" >
-			  <input type="image" alt="saveRoute" onclick="saveRoute();" src="saveButton.png" style="width:64px; height: 64px">
+			  <input type="image" alt="saveRoute" onclick="saveRoute();" src="media/saveButton.png" style="width:64px; height: 64px">
 			</a>
 		</div>
 		<footer id="footerDiv">
@@ -47,21 +47,21 @@
 			<div class="modal-content">
 				<a href="#" style="text-align: right;">X</a>
 				<h2>Calling the police</h2>
-				<img class="modalImg" src="phone.png" alt="calling">
+				<img class="modalImg" src="media/phone.png" alt="calling">
 			</div>  
 		</div>
 		<div id="myModalContact" class="modal">
 			<div class="modal-content">
 				<a href="#" style="text-align: right;">X</a>
 				<h2>Calling contact</h2>
-				<img class="modalImg" src="phone.png" alt="calling">
+				<img class="modalImg" src="media/phone.png" alt="calling">
 			</div>  
 		</div>
 		<div id="myModalSave" class="modal">
 			<div class="modal-content">
 				<a href="#" style="text-align:right">X</a>
 				<h2>Route saved</h2>
-				<img class="modalImg" src="saveButton.png" alt="saved">
+				<img class="modalImg" src="media/saveButton.png" alt="saved">
 			</div>  
 		</div>
 	</body>

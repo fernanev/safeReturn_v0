@@ -2,9 +2,9 @@
   <head>
 	<meta charset="UTF-8">
 	<title> SafeReturn</title>
-	<link rel="stylesheet" type="text/css" href="style.css">    
-	<script src='contactInfo.js'></script>
-	<script src='users.txt'></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">    
+	<script src='js/contactInfo.js'></script>
+	<script src='js/users.txt'></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
   </head>
   
@@ -16,19 +16,28 @@
 		
 		<section >
 			<form name="contactInfo" id="contactInfoForm" action="config.html" onsubmit="event.preventDefault(); changeContactInfo()" method="get" accept-charset="utf-8">
-					<div><label for="name">Name</label>
-					<input type="text" id="name" name="name" placeholder="contact name" required></div>
-				
-					<div><label for="phone"> Phone number</label>
-					<input type="telephone" id="phonenumber" name="phonenumber" pattern="\d\d\d\d\d\d\d\d\d" title="#########" placeholder="" required></div>
-					
-					<div><label for="usermail">Email</label>
-					<input type="email" id="usermail" name="usermail" placeholder="email@email.com" required></div>
-					
-					<div><input class="buttonClass" type="submit" value="Save"></div>
-				</div>
+				<table id="fromToTable">
+					<tr>
+						<td> <label for="name">Name</label> </td>
+						<td> <input type="text" id="name" name="name" placeholder="contact name" required> </td>
+					</tr>	
+					<tr>
+						<td> <label for="name">Name</label> </td>
+						<td> <input type="text" id="name" name="name" placeholder="contact name" required> </td>
+					</tr>
+					<tr>
+						<td><label for="usermail">Email</label> </td>
+						<td> <input type="email" id="usermail" name="usermail" placeholder="email@email.com" required></td>
+					</tr>
+				</table>
+				<input class="buttonClass" type="submit" value="Save">	
 			</form>
 		</section>
+		
+		<section>
+			<img class="logo" src="media/LogoGraphic.png" alt="Logo" style="width:25%;">
+		</section>
+		
 		<footer id="footerDiv">
 			<div>Antonio Bazco and Eva Fernandez. 2015 Eurecom</div>
 			<a href="mailto:Antonio.Bazco-Nogueras@eurecom.com" class="emailContact">Contact me</a>			

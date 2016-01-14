@@ -4,12 +4,20 @@ function loadList() {
 	var routeList = window.localStorage.getItem('routes');
 	routeList = routeList.split('?');
 	
-	formu = document.createElement("form");
+	var formu = document.createElement("form");
 	formu.action = "route.html";
 	formu.method = "get";
 	formu.setAttribute("onsubmit", "event.preventDefault(); setParameters()");
 	
+	var table = document.createElement("table");
+	var row ;
+	var column1;
+	var column2;
+	
 	for (var i = 1; i < routeList.length; i++) {
+		row = document.createElement("tr");
+		column1 = document.createElement("td");
+	    column2 = document.createElement("td");
 		var rButton = document.createElement('input');
 		var text = document.createElement('label');;
 		rButton.setAttribute("type", "radio");
@@ -17,13 +25,17 @@ function loadList() {
 		rButton.setAttribute("name", "route");
 		rButton.setAttribute("id", "route"+i);
 		rButton.value = routeList[i].split('-')[2];
-		text.innerHTML = "<label for='route"+i+"'>from: " + routeList[i].split('-')[0] + "   to: " + routeList[i].split('-')[1] + "</label>";
-		formu.appendChild(rButton);
-		formu.appendChild(text);
+		text.innerHTML = "<label for='route"+i+"'><b>from:</b> " + routeList[i].split('-')[0] + "   <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to:</b> " + routeList[i].split('-')[1] + "</label>";
+		column1.appendChild(rButton);
+		column2.appendChild(text);
+		row.appendChild(column1);
+		row.appendChild(column2);
+		table.appendChild(row);
 	}
 	var button = document.createElement('input');
 	button.setAttribute("type", "submit");
-	formu.appendChild(button);
+	button.setAttribute("class", "buttonClass");
+	formu.appendChild(table);
 	divSection.appendChild(formu);
 }
 

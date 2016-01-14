@@ -2,9 +2,9 @@
   <head>
 	<meta charset="UTF-8">
 	<title> SafeReturn</title>
-	<link rel="stylesheet" type="text/css" href="style.css">    
-	<script type='text/javascript' src='checkUser.js'></script>	
-	<script src='users.txt'></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">    
+	<script type='text/javascript' src='js/checkUser.js'></script>	
+	<script src='media/users.txt'></script>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
   </head>
@@ -17,27 +17,40 @@
 		
 		<section class="SignUpform cf">
 			<form id="signUp" name="signUp" action="main.html" onsubmit="event.preventDefault(); createUser()" accept-charset="utf-8">
-				<div>
-					<div><label for="name">Name</label>
-					<input type="text" id="name" placeholder="your name" required></div>
-					<div><label for="username">Username</label>
-					<input type="text" id="username" placeholder="your username" required></div>
-					
-					<div><label for="phone"> Phone number</label>
-					<input type="tel" id="phonenumber" placeholder="" pattern="\d\d\d\d\d\d\d\d\d" title="#########" required></div>
-					
-					<div><label for="usermail">Email</label>
-					<input type="email" id="usermail" placeholder="yourname@email.com" required></div>
-					
-					<div><label for="password">Password</label>
-					<input type="password" id="password" placeholder="password" required></div>
-					<div><label for="repassword">Repeat Password</label>
-					<input type="password" id="rePassword" placeholder="password" required></div>
-
-					<div><input class="buttonClass" type="submit" id="submitButton" value="Login"></div>
-				</div>
+				<table id="fromToTable">
+					<tr>
+						<td> <label for="name">Name</label> </td>
+						<td> <input type="text" id="name" placeholder="your name" required> </td>
+					</tr>	
+					<tr>
+						<td> <label for="username">Username</label> </td>
+						<td> <input type="text" id="username" placeholder="your username" required> </td>
+					</tr>
+					<tr>
+						<td><label for="phone"> Phone number</label> </td>
+						<td><input type="tel" id="phonenumber" placeholder="" pattern="\d\d\d\d\d\d\d\d\d" title="#########" required></td>
+					</tr>
+					<tr>
+						<td><label for="usermail">Email</label> </td>
+						<td> <input type="email" id="usermail" placeholder="yourname@email.com" required></td>
+					</tr>
+					<tr>
+						<td><label for="password">Password</label></td>
+						<td> <input type="password" id="password" placeholder="password" required></td>
+					</tr>
+					<tr>
+						<td><label for="repassword">Repeat Password</label></td>
+						<td> <input type="password" id="rePassword" placeholder="password" required></td>
+					</tr>
+				</table>
+				<input class="buttonClass" type="submit" id="submitButton" value="Login">
 			</form>
 		</section>
+		
+		<section>
+			<img class="logo" src="media/LogoGraphic.png" alt="Logo" style="width:25%; padding: 1em;">
+		</section>		
+		
 		<footer id="footerDiv">
 			<div>Antonio Bazco and Eva Fernandez. 2015 Eurecom</div>
 			<a href="mailto:Antonio.Bazco-Nogueras@eurecom.com" class="emailContact">Contact me</a>			

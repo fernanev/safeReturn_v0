@@ -3,9 +3,9 @@
 	<meta charset="UTF-8">
 	<title> SafeReturn </title>
 
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
     <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=true'></script>
-	<script src='config.js'></script>
+	<script src='js/config.js'></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
   </head>
   
@@ -18,24 +18,36 @@
 		
 		<section class="configuration">
 			<form name="changeFields" id="formChange" action="config.html" onsubmit="event.preventDefault(); changeInfo()" method="get" accept-charset="utf-8">
-				<div><label for="username">Username: </label> <b id="labelUser" name="username"></b></div>
-				<div><label for="name">Name</label>
-				<input type="text" id="name" name="name" placeholder="" required></div>
-				
-				<div><label for="phone"> Phone number</label>
-				<input type="telephone" id="phonenumber" name="phonenumber" pattern="\d\d\d\d\d\d\d\d\d" title="#########" placeholder="" required></div>
-				
-				<div><label for="usermail">Email</label>
-				<input type="email" id="usermail" name="usermail" placeholder="" required></div>
-				
-				<div><label for="newPassword"> new password</label>
-				<input type="password" id="newPassword" name="newPassword" placeholder="password" ></div>
-				<div><label for="reNewPassword">Repeat new Password</label>
-				<input type="password" id="reNewPassword" name="reNewPassword" placeholder="password" ></div>
-				
-				<div><label for="currentPassword">Introduce the current password</label>
-				<input type="password" id="currentPassword" name="password" placeholder="password" required></div>					
-				<div><input type="submit" value="Update changes"></div>
+				<table id="fromToTable">
+							<tr>
+								<td> <label for="username">Username: </label> <b id="labelUser" name="username"></b> </td>
+							</tr>
+							<tr>
+								<td><label for="name">Name</label></td>
+								<td><input type="text" id="name" name="name" placeholder="" required></td>
+							</tr>
+							<tr>
+								<td><label for="phone"> Phone number</label></td>
+								<td><input type="telephone" id="phonenumber" name="phonenumber" pattern="\d\d\d\d\d\d\d\d\d" title="#########" placeholder="" required></td>
+							</tr>	
+							<tr>
+								<td><label for="usermail">Email</label></td>
+								<td><input type="email" id="usermail" name="usermail" placeholder="" required></td>
+							</tr>
+							<tr>
+								<td><label for="newPassword"> new password</label></td>
+								<td><input type="password" id="newPassword" name="newPassword" placeholder="password" ></td>
+							</tr>
+							<tr>
+								<td><label for="reNewPassword">Repeat new Password</label></td>
+								<td><input type="password" id="reNewPassword" name="reNewPassword" placeholder="password" ></td>
+							</tr>
+							<tr>
+								<td><label for="currentPassword">Introduce the current password</label></td>
+								<td><input type="password" id="currentPassword" name="password" placeholder="password" required></td>
+							</tr>	
+					</table>
+					<input class="buttonClass" type="submit" value="Update changes">
 			</form>
 		</section>
 		
@@ -49,6 +61,10 @@
 			<form name="goBackButton" action="main.html" method="get" accept-charset="utf-8">
 					<input class="buttonClass" type="submit" value="Come back">
 			</form>
+		</section>
+		
+		<section>
+			<img class="logo" src="media/LogoGraphic.png" alt="Logo" style="width:10%; padding: 1em;">
 		</section>
 		
 		<footer id="footerDiv">

@@ -1,7 +1,10 @@
 var map;
 
 function saveRoute() {
-	var routes = "" + localStorage.getItem('from') + "-" +  localStorage.getItem('to') + "-" +  window.location.search.split('=')[1];
+	var to=localStorage.getItem('to').replace('%2C',', ').replace('+',' ');
+	var from=localStorage.getItem('from').replace('%2C',', ').replace('+',' ');
+	
+	var routes = "" + from + "-" + to + "-" +  window.location.search.split('=')[1];
 	var savedRoutes = window.localStorage.getItem('routes');
 	if (savedRoutes == null) {
 		savedRoutes = "";
@@ -10,6 +13,11 @@ function saveRoute() {
 	window.localStorage.setItem('routes', routes);
 	
 	//alert('Route Saved    ' + routes);
+}
+
+function ring() {
+	var audio = new Audio('media/callRing.mp3');
+	audio.play();
 }
 
 function initialize() {

@@ -19,11 +19,11 @@ function sendComment() {
 		return;
 	} 
 	
-	var dateString = date.getUTCDate() + "/" + date.getUTCMonth() + "/" + date.getUTCFullYear() + "	" + date.getHours() + ":" + date.getMinutes();
+	var dateString = date.getUTCDate() + "/" + date.getUTCMonth()+1 + "/" + date.getUTCFullYear() + "	" + date.getHours() + ":" + date.getMinutes();
 
 	var commentSection = document.getElementById("commentSection");
 	
-	var newComment = "<div class = 'comment' name='" + place + "'> <div name = 'place'>"+place+"</div><div name ='date'>"+dateString+"</div><div name = 'comment'>"+comment+"</div>  </div>";
+	var newComment = "<div class = 'comment' name='" + place + "'> <div class='y' name = 'place'>"+place+"</div><div name ='date'>"+dateString+"</div><div name = 'comment'>"+comment+"</div>  </div>";
 	
 	commentSection.innerHTML = commentSection.innerHTML + newComment; 
 	
@@ -36,6 +36,7 @@ function searchComment() {
 	var commentSection = document.getElementById("commentSection");
 	var searchSection = document.getElementById("searchSection");
 	var dateComplete;
+	var dateSplit;
 	document.getElementById('commentSection').innerHTML = window.localStorage.getItem('comments');
 
 	if (!place) {
@@ -57,11 +58,8 @@ function searchComment() {
 			for (var i = 0; i < listd.length; i++) {
 				
 				dateComplete = listd[i].querySelector("[name='date']").innerHTML.split('/');
-				date = date.split('-');
-				alert(date);
-				alert(dateComplete);
-				
-				if ((parseInt(date[2]) == parseInt(dateComplete[0])) && (parseInt(date[1]) == (1 + parseInt(dateComplete[1]))) && (parseInt(date[1]) == parseInt(dateComplete[2].split(" ")[0]))) {
+				dateSplit = date.split('-');
+				if ((parseInt(dateSplit[2]) == parseInt(dateComplete[0])) && (parseInt(dateSplit[1]) == (parseInt(dateComplete[1]))) && (parseInt(dateSplit[0]) == parseInt(dateComplete[2].split(" ")[0]))) {
 					searchSection.appendChild(listd[i]);
 				}
 			}

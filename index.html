@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> SafeReturn</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">    
+		<script type='text/javascript' src='js/checkUser.js'></script>	
+		<script src='media/users.txt'></script>
+
+			<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	</head>
+	
+	<body>
+   		<header>
+			<h1> SafeReturn</h1>
+			<h4> Find your route</h4>
+		</header>
+		
+		<section class="loginform cf">
+			<form name="login" method="get" accept-charset="utf-8">
+				<table id="fromToTable">
+					<tr>
+						<td><label for="usermail">Email</label> </td>
+						<td> <input type="email" id="usermail" placeholder="yourname@email.com" required> </td>
+					</tr>	
+					<tr>
+						<td><label for="password">Password</label></td>
+						<td> <input type="password" id="password" placeholder="password" required></td>
+					</tr>
+				</table>
+				
+				<input type="checkbox" name="rememberMe" checked> Remember me &nbsp;&nbsp;&nbsp;
+				<input class="buttonClass" type="button" value="Login" onClick="userExist()">
+			</form>
+		</section>
+		<section class="signUp cf">
+			<form name="signUpButton" action="newUser.html" method="get" accept-charset="utf-8">
+				<input class="buttonClass" type="submit" value="New User">
+			</form>
+		</section>
+		
+		<section>
+			<img class="logo" src="media/LogoGraphic.png" alt="Logo" style="width:30%; padding: 3em;">
+		</section>
+  
+		<footer id="footerDiv">
+			<div>Antonio Bazco and Eva Fernandez. 2015 Eurecom</div>
+			<a href="mailto:Antonio.Bazco-Nogueras@eurecom.com" class="emailContact">Contact me</a>			
+		</footer>
+
+	</body>
+</html>
