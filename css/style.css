@@ -1,9 +1,8 @@
 @media screen and (max-width: 600px){
-
-
 	h1 {
 		font-size: 20;
 	}
+	
 	h4 {
 		font-size: 14;
 	}
@@ -11,6 +10,7 @@
 	.modal-content{
 		font-size: 10;
 	}
+	
 	.modalImg{
 		width: 28px; 
 		height: 28px
