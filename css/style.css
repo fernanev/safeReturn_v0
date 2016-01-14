@@ -7,14 +7,15 @@
 		font-size: 14;
 	}
 
-	.modal-content{
-		font-size: 10;
-	}
 	
-	.modalImg{
-		width: 28px; 
-		height: 28px
-	}
+}
+
+h1 {
+	font-size: 4vw;
+}
+
+h4{
+	font-size: 2vw;
 }
 .redArea {
 	 background: rgba(240,40,40,1);
@@ -306,6 +307,7 @@ footer{
 
 .modal-content{
   background-color:#99ccff;
+  font-size: 2vw;
   width: 25%;
   margin: 1em auto;
   position: fixed;
